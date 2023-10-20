@@ -3,7 +3,7 @@ import '../index.css';
 import developer from '../assets/developer.jpg';
 import Typed from 'typed.js';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import resume from '../assets/resume.jpg'
+import resume from '../assets/resume.png'
 
 function TopSection() {
     function TypedText() {
