@@ -1,13 +1,9 @@
 import React from "react";
 import '../index.css'
-import Project1 from "./project1";
-import Project1desc from "./project1desc";
-import Project2 from "./project2";
-import Project2desc from "./project2desc";
-import Project3 from "./Project3";
-import Project3desc from "./Project3desc";
-import Project4desc from "./project4desc";
-import Project4 from "./project4";
+import projectInformations from "./ProjectInformations";
+// import description from "./ProjectDescription";
+import Project from "./Project";
+import ProjectDesc from "./ProjectDesc";
 function Projects() {
     return (
         <div>
@@ -18,33 +14,31 @@ function Projects() {
             <div className="underline-projects">
 
             </div>
+            <br /><br />
             <div className="card-div">
-                <div className="project-1">
-                    <Project1 />
-                    <Project1desc />
-                </div>
-                <div className="underline-projects-1">
+                {projectInformations.map((infos) => {
+                    return (
+                        <div className="project-single-divs">
+                            <Project id={infos.id} image={infos.image} title={infos.title} link={infos.link} />
+                            <div style={{height : "30px"}}>
 
-                </div>
-                <div className="project-2">
-                    <Project2desc />
-                    <Project2 />
-                </div>
-                <div className="underline-projects-2">
+                            </div>
+                            <ProjectDesc description={infos.description}/><br /><br />
+                            {/* <div style={{height : '20px'}}>
 
-                </div>
-                <div className="project-3">
-                    <Project3 />
-                    <Project3desc />
-                </div>
-                <div className="underline-projects-3">
+                            </div> */}
+                            <div className="underline-projects">
 
-                </div>
-                <div className="project-4">
-                    <Project4desc />
-                    <Project4 />
-                </div>
+                            </div>
+                            <div style={{height : '50px'}}>
+
+                            </div>
+                        </div>
+                        
+                    )
+                })}
             </div>
+
         </div>
     )
 }
