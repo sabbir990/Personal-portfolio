@@ -3,7 +3,6 @@ import '../index.css';
 import developer from '../assets/developer.jpg';
 import Typed from 'typed.js';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import resume from '../assets/resume.png'
 
 function TopSection() {
     function TypedText() {
@@ -43,7 +42,7 @@ function TopSection() {
 
                 </div>
                 <div className="btn-div">
-                    <a href={resume} className="download-button" download>Download my resume</a>
+                    <a href='https://acrobat.adobe.com/id/urn:aaid:sc:AP:a73de05e-b2cc-4c1a-b948-d4e2495a4528' className="download-button" target="_blank">Download my resume</a>
                 </div>
             </div>
         </div>
